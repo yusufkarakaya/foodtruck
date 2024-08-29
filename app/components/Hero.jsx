@@ -3,7 +3,7 @@ import React from "react";
 const Hero = () => {
   return (
     <section className="flex justify-center">
-      <div className="flex justify-center mt-10 max-w-[1200px] min">
+      <div className="flex justify-center mt-6 max-w-[1200px] min">
         <div className="background-hero min-w-[1200px] min-h-[550px] p-4 flex flex-col justify-center items-center">
           <div className="flex flex-col ">
             <h1 className="text-7xl font-bold text-white text-center">

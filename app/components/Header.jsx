@@ -11,7 +11,7 @@ const Header = () => {
         <h1 className={`text-7xl text-[#FFD700] ${amatic.className}`}>
           Temecula Treats
         </h1>
-        <ul className="flex justify-center gap-10 mt-10">
+        <ul className="flex justify-center gap-10 mt-6">
           <li className="menu-item ">
             <a className={gloria.className} href="/home">
               HOME
