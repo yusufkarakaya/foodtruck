@@ -1,14 +1,13 @@
 import React from "react";
-import { Bungee, Amatic_SC, Gloria_Hallelujah } from "next/font/google";
+import { Amatic_SC, Gloria_Hallelujah } from "next/font/google";
 
-const bungee = Bungee({ subsets: ["latin"], weight: "400" });
 const amatic = Amatic_SC({ subsets: ["latin"], weight: "700" });
 const gloria = Gloria_Hallelujah({ subsets: ["latin"], weight: "400" });
 
 const Header = () => {
   return (
     <header className="text-center mt-12">
-      <nav className={bungee.className}>
+      <nav>
         <h1 className={`text-7xl text-[#FFD700] ${amatic.className}`}>
           Temecula Treats
         </h1>
