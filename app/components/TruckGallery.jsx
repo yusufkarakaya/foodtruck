@@ -49,7 +49,7 @@ const Gallery = () => {
             onClick={() => openModal(index)}
             style={{ cursor: "pointer" }}
           >
-            <img src={truck.src} alt={truck.alt} width={300} height={300} />
+            <img src={truck.src} alt={truck.alt} width={350} height={350} />
           </SwiperSlide>
         ))}
       </Swiper>

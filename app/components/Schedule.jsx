@@ -1,6 +1,5 @@
 import React from "react";
 import TruckGallery from "./TruckGallery";
-import FoodGallery from "./FoodGallery";
 
 const Schedule = () => {
   return (
