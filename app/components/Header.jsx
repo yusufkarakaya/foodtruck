@@ -1,14 +1,20 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Amatic_SC, Gloria_Hallelujah } from "next/font/google";
 import Link from "next/link";
 import { usePathname } from "next/navigation"; // Use this hook in the App Router
+import { FaBars, FaTimes } from "react-icons/fa"; // Import icons for the hamburger and close button
 
 const amatic = Amatic_SC({ subsets: ["latin"], weight: "700" });
 const gloria = Gloria_Hallelujah({ subsets: ["latin"], weight: "400" });
 
 const Header = () => {
   const pathname = usePathname(); // Get the current path
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for controlling the menu
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <header className="text-center mt-12">
@@ -18,7 +24,20 @@ const Header = () => {
             Temecula Treats
           </h1>
         </Link>
-        <ul className="flex justify-center gap-10 mt-6">
+        <div className="md:hidden mt-6">
+          <button
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+            className="text-[#FFD700] text-4xl focus:outline-none"
+          >
+            {isMenuOpen ? <FaTimes /> : <FaBars />}
+          </button>
+        </div>
+        <ul
+          className={`${
+            isMenuOpen ? "block" : "hidden"
+          } md:flex justify-center gap-10 mt-6`}
+        >
           <li className="menu-item">
             <Link
               href="/"
