@@ -39,10 +39,10 @@ const Gallery = () => {
         }}
       >
         {[
-          { src: "/truck/foodtruck1.jpg", alt: "Burger" },
-          { src: "/truck/foodtruck2.jpg", alt: "Cake" },
-          { src: "/truck/foodtruck3.jpg", alt: "French Fries" },
-          { src: "/truck/foodtruck4.jpg", alt: "French Fries" },
+          { src: "/truck/foodtruck1.jpg", alt: "Food Truck 1" },
+          { src: "/truck/foodtruck2.jpg", alt: "Food Truck 2" },
+          { src: "/truck/foodtruck3.jpg", alt: "Food Truck 3" },
+          { src: "/truck/foodtruck4.jpg", alt: "Food Truck 4" },
         ].map((truck, index) => (
           <SwiperSlide
             key={index}
@@ -99,10 +99,10 @@ const Gallery = () => {
               initialSlide={activeIndex}
             >
               {[
-                { src: "/truck/foodtruck1.jpg", alt: "Burger" },
-                { src: "/truck/foodtruck2.jpg", alt: "Cake" },
-                { src: "/truck/foodtruck3.jpg", alt: "French Fries" },
-                { src: "/truck/foodtruck4.jpg", alt: "French Fries" },
+                { src: "/truck/foodtruck1.jpg", alt: "Food Truck 1" },
+                { src: "/truck/foodtruck2.jpg", alt: "Food Truck 2" },
+                { src: "/truck/foodtruck3.jpg", alt: "Food Truck 3" },
+                { src: "/truck/foodtruck4.jpg", alt: "Food Truck 4" },
               ].map((truck, index) => (
                 <SwiperSlide key={index}>
                   <img

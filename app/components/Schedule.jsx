@@ -4,13 +4,16 @@ import TruckGallery from "./TruckGallery";
 const Schedule = () => {
   return (
     <div className="flex justify-center max-w-[1200px] mx-auto">
-      <div className="bg-[#2C3E50] text-white p-8 shadow-md w-full">
-        <h2 className="text-6xl font-bold text-center mb-8">Truck Schedule</h2>
+      <div className="bg-[#2C3E50] text-white shadow-md w-full">
+        <h2 className="text-6xl font-bold text-center mb-8 pt-16">
+          Truck Schedule
+        </h2>
         <p className="text-center text-gray-300 mb-8 text-xl">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
-        <div className="flex justify-between">
+
+        <div className="flex justify-between px-8">
           <div className="w-1/2">
             <h3 className="text-3xl font-semibold text-yellow-400 mb-6">
               Today, February 14th
@@ -92,6 +95,7 @@ const Schedule = () => {
             </ul>
           </div>
         </div>
+
         <TruckGallery />
       </div>
     </div>
