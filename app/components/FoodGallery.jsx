@@ -9,7 +9,7 @@ const FoodGallery = () => {
         Check out some of the delicious food we serve!
       </p>
       <div className="mt-10 pb-20">
-        <div className="flex gap-10 justify-center text-center">
+        <div className="sm:flex sm:flex-row flex flex-col items-center gap-10 justify-center text-center">
           <div className="border  p-4 shadow-lg hover:shadow-xl transition-shadow">
             <div className="rounded-lg overflow-hidden">
               <Image

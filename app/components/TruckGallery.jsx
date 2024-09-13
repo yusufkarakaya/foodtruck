@@ -26,10 +26,23 @@ const Gallery = () => {
 
   return (
     <div className="mt-16">
-      <h2 className="text-6xl font-bold text-center mb-8">Truck Gallery</h2>
+      <h2 className="text-4xl md:text-6xl font-bold text-center mb-8">
+        Truck Gallery
+      </h2>
       <Swiper
         spaceBetween={0}
-        slidesPerView={4}
+        slidesPerView={1} // 1 slide per view for mobile
+        breakpoints={{
+          640: {
+            slidesPerView: 2, // 2 slides for screens >= 640px
+          },
+          768: {
+            slidesPerView: 3, // 3 slides for screens >= 768px
+          },
+          1024: {
+            slidesPerView: 4, // 4 slides for screens >= 1024px
+          },
+        }}
         navigation={true}
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
@@ -47,47 +60,27 @@ const Gallery = () => {
           <SwiperSlide
             key={index}
             onClick={() => openModal(index)}
-            style={{ cursor: "pointer" }}
+            className="cursor-pointer"
           >
-            <img src={truck.src} alt={truck.alt} width={350} height={350} />
+            <img src={truck.src} alt={truck.alt} className="w-full h-auto" />
           </SwiperSlide>
         ))}
       </Swiper>
 
       {isModalOpen && (
         <div
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            backgroundColor: "rgba(0, 0, 0, 0.8)",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            zIndex: 1000,
-          }}
-          onClick={closeModal} // Close modal on clicking outside the Swiper
+          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex justify-center items-center z-50"
+          onClick={closeModal}
         >
           <div
-            style={{ position: "relative", width: "800px", height: "800px" }}
+            className="relative w-full max-w-4xl h-auto p-4"
             onClick={(e) => e.stopPropagation()} // Prevent closing modal when clicking inside it
           >
             <button
               onClick={closeModal}
-              style={{
-                position: "absolute",
-                top: "10px",
-                right: "10px",
-                backgroundColor: "white",
-                border: "none",
-                cursor: "pointer",
-                padding: "10px",
-                zIndex: 1001,
-              }}
+              className="absolute top-4 right-4 bg-white p-2 rounded-full z-50"
             >
-              <FaWindowClose style={{ color: "black" }} />
+              <FaWindowClose className="text-black text-xl" />
             </button>
             <Swiper
               spaceBetween={10}
@@ -108,11 +101,7 @@ const Gallery = () => {
                   <img
                     src={truck.src}
                     alt={truck.alt}
-                    style={{
-                      width: "800px",
-                      height: "800px",
-                      objectFit: "cover",
-                    }}
+                    className="w-full h-auto max-h-[90vh] object-cover"
                   />
                 </SwiperSlide>
               ))}
